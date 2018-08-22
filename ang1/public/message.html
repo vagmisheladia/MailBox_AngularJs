@@ -1,0 +1,81 @@
+<h1>compose mail</h1>
+
+<input type="hidden" ng-model="c_user.username">
+
+<form>
+    <table>
+        <tr>
+            <td>To: </td>
+            <td>
+                <select data-ng-model="c_user.email">
+                    <option data-ng-repeat="u in user">{{u.username}}</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>message: </td>
+            <td>
+                <input type="text" ng-model="c_user.msg" placeholder="message">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit" ng-click="send()" />send </button>
+            </td>
+        </tr>
+    </table>
+</form>
+<br>
+<br>
+<div>
+    <button ng-click="back()">Go to Message</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form >
+TO :
+<select data-ng-model="mForm.email">
+    <option data-ng-repeat="u in user" >{{u.email}}</option>
+</select>
+<br>
+<br> 
+from : <div ng-model="mForm.username" ng-repeat="c in c_user">{{c.username}}</div>
+    
+
+<input type="text" name="username" ng-model="c_user.username" >
+
+<br>
+<br> 
+message :
+<input type="text" ng-model="mForm.msg" placeholder="message">
+<br>
+<br>
+
+
+
+<button type="button" ng-click="send()" />send </button>
+
+</form> -->

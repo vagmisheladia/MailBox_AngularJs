@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src = "http://localhost:3000/angular.min.js"></script>
+	<script type="text/javascript" src="http://localhost:3000/app.js"></script>
+	<script type="text/javascript" src = "https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
+</head>
+<body>
+
+		<div ng-app="myapp" ng-controller="appcon">
+			<div>
+				<a href="#/" ng-if="isLoggedIn">Home</a> |
+				<a href="#/reg" ng-if="!isLoggedIn">Signup</a> |
+				<a href="#/login" ng-if="!isLoggedIn">login</a> |
+				<a href= "#/logout" ng-if="isLoggedIn">logout</a>|
+				<a href= "#/profile" ng-if="isLoggedIn">profile</a> |
+				<a href="#/email" ng-if="isLoggedIn">email</a>
+			
+				<div ng-view=""></div>
+			</div>
+		</div>
+</body>
+</html>

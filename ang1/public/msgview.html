@@ -1,0 +1,37 @@
+<h1>view message</h1>
+
+
+<input type="hidden" ng-model="c_user.username">
+<form>
+    <table>
+        <tr>
+            <td name="reciever" ng-model="details.sender" /> Sender : {{details.sender}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Message :
+                <input type="text" name="message" value=" {{details.msg}}">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Reply :
+                <textarea type="textarea" name="msg" ng-model="details.nmsg"> </textarea>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button type="submit" name="btn" ng-click="send()">send</button>
+
+                <button type="delete" name="deletebtn" data-ng-click="delete()">Delete </button>
+
+                <button type="button" name="imp" ng-click="impo()" >{{button}}</button>
+            </td>
+        </tr>
+        {{id}}
+    </table>    
+
+</form>

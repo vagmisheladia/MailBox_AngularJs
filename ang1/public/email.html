@@ -1,0 +1,23 @@
+<h1>message page</h1>
+<!-- {{uname}} -->
+<button type="button" ng-click="compose()" >compose</button>
+<input type="hidden" ng-model="c_user.username">
+<h1>inbox</h1>
+
+<table border="1px">
+    <tr>
+        <th>From</th>
+        <th>message</th>
+    </tr>
+    <tr ng-repeat="k in msg track by $index">
+        <td>
+             <a href="#/email/{{$index}}">{{ k.sender }} </a>
+        </td>
+        <td>
+                {{ k.msg}}  
+        </td>
+    </tr>
+</table>
+
+
+    <!-- <div ng-repeat="m in a.job">{{m}}</div> -->
